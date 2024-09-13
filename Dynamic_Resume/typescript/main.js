@@ -1,37 +1,40 @@
 "use strict";
-const resumeForm = document.getElementById('resumeForm');
-const resumeDisplay = document.getElementById('resumeDisplay');
-resumeForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const resumeData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        degree: document.getElementById('degree').value,
-        school: document.getElementById('school').value,
-        jobTitle: document.getElementById('jobTitle').value,
-        company: document.getElementById('company').value,
-        skills: document.getElementById('skills').value.split(',').map(skill => skill.trim()),
-    };
-    generateResume(resumeData);
-});
-function generateResume(data) {
-    resumeDisplay.innerHTML = `
-    <h2>${data.name}</h2>
-    <p>Email: ${data.email}</p>
+const Form = document.getElementById("resume");
+const cvShowcaseElement = document.getElementById("Curriculum-Vitae");
+Form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const school = document.getElementById("school").value;
+    const degree = document.getElementById("degree").value;
+    const job = document.getElementById("job").value;
+    const company = document.getElementById("company").value;
+    const skills = document.getElementById("skills").value;
+    const profileHTML = `
+    <h2><b>Professional Highlights</b></h2>
+    <br/>
+    <h3>Personal Information</h3>
+    <p>Name: ${name}</p>
+    <p>Email: ${email}</p>
+
+
     <h3>Education</h3>
-    <p>${data.degree} from ${data.school}</p>
-    <h3>Work Experience</h3>
-    <p>${data.jobTitle} at ${data.company}</p>
-    <h3>Skills</h3>
-    <ul>
-      ${data.skills.map(skill => `<li>${skill}</li>`).join('')}
-    </ul>
-  `;
-}
-function validateForm(data) {
-    if (!data.name || !data.email || !data.degree || !data.school || !data.jobTitle || !data.company || data.skills.length === 0) {
-        alert('Please fill in all fields');
-        return false;
+    <p>School: ${school}</p>
+    <p>Degree: ${degree}</p>
+
+
+
+
+    <h3>Experience</h3>
+    <p>Job-Title: ${job}</p>
+    <p>Company: ${company}</p>
+
+
+     <h3>Skills</h3>
+    <p>Skills: ${skills}</p>
+
+    `;
+    if (cvShowcaseElement) {
+        cvShowcaseElement.innerHTML = profileHTML;
     }
-    return true;
-}
+});
