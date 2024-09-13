@@ -1,82 +1,100 @@
-body{
-	padding: 0px;
-	margin: 0px;
+body {
+    margin: 10px;
+    padding: 10px;
 }
 
 
-.container{
-	width: 50%;
-	margin: auto;
-	border-radius:10px;
-	border: 2px solid #0E0E79;
-	padding: 16px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+form {
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid #09094A; 
+
 }
 
 
+.img-container{
+    text-align: center;   
+}
 
-.Profile-img{
+
+.profile-img {
     width: 150px;
     border-radius: 50%;
-    padding: 30px;
 }
+
 
 
 
 h1{
-	padding-top: 60px;
-	padding-left: 30px;
-	font-size: 40px;
-    font-family: Arial, sans-serif;
-    color:#09097D;
+    font-size:60px;
+    text-align: center;
+    color: #09094A;
+    font-family: sans-serif;
 }
 
-
-
-.columns{
-	columns: 2;
-	display: flex;
+h2{
+    font-size:40px;
 }
 
-
-
-fieldset{
-	margin-bottom:40px;
-	border: 1px solid #A5A5C1;
-	border-radius:7px;
+fieldset {
+    border: 1px solid #09094A; 
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
+legend {
+    font-weight: bold;
+    text-align: left;
+    color: #2F3866;
+    
+}
 
-
-legend{
-	font-size:17px;
-	font-family: Arial, sans-serif;
-
+label {
+    display: block;
+    margin-top: 10px;
+    color: black;
 
 }
 
-
-input{
-	display: flex;
-	width: 90%;
-	margin: 10px;
-	padding: 7px;
+input,textarea {
+    margin-top: 4px;
+    padding: 8px;
+    width: calc(100% - 1px);
+    border: 1px solid #09094A; 
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-
 
 button {
-  padding: 10px 10px;
-  background-color: #09097D;
-  color: white;
-  border-radius:20px;
-  border:inherit;
+    width: 100%;
+    background-color:#09094A;
+    color: white;
+    border:inherit;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: arial , serif;
+    padding: 10px;
 }
 
-
-button:hover{
-	background-color:#7F7F88;
+button :hover {
+    color: #D8D8DD;
 }
 
+#Curriculum-Vitae{
+    max-width: 700px;
+    margin: auto;
+    padding:20px;
+    border: 2px solid white; 
+    border-radius: 10px;
+    background-color:#09094A;
+    color: white;
+    margin-top:10px;
+}
 
-
+#Curriculum-Vitae h2 {
+    color:white;
+}
