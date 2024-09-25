@@ -21,5 +21,5 @@
 
 
 ### 📄 Live Demo:
-(https://dynamic-resume-lake.vercel.app/)
+(https://dynamic-resume-alpha-seven.vercel.app/)
 
